@@ -13,10 +13,18 @@
   </head>
   <body>
     <script>
-      var nome = window.prompt("Qual é o seu nome?");
-      document.write(`Seu nome tem ${nome.length} letras <br>`);
-      document.write(`Seu em maiúsculas é ${nome.toUpperCase()} `);
-      document.write(`Seu em minúsculas é ${nome.toLowerCase()} `);
+      // var nome = window.prompt("Qual é o seu nome?");
+      // document.write(`Seu nome tem ${nome.length} letras <br>`);
+      // document.write(`Seu em maiúsculas é ${nome.toUpperCase()} `);
+      // document.write(`Seu em minúsculas é ${nome.toLowerCase()} `);
+
+      var n1 = 158.5;
+      valor = n1.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "EUR",
+      });
+
+      alert(valor);
     </script>
   </body>
 </html>
