@@ -17,14 +17,28 @@
   <body>
     <h1>Iniciando estudos DOM</h1>
     <p>Aqui vai o resultado</p>
-    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
 
     <script>
       // location - localização do seu site
       // history - guarda os registos do teu site
       // document - documento do seu site (html)
 
-      window.document.write(window.document.URL);
+      // window.document.write(window.document.URL);
+      // var corpo = window.document.body;
+      // var p1 = window.document.getElementsByTagName("p")[0];
+      // corpo.style.background = "black";
+      // p1.style.color = "blue";
+
+      // window.document.write(p1.innerText);
+
+      // var d = window.document.getElementById("msg");
+      // // window.document.write(d.innerHTML);
+      // d.style.background = "green";
+      // d.innerText = "Estou aguardando ";
+
+      var d = window.document.querySelector("div#msg");
+      d.innerText = "Olá, Makengo";
     </script>
   </body>
 </html>
