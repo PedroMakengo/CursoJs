@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        /* width: 100vw; */
+        height: 100vh;
+        background-color: rgb(96, 96, 201);
+        color: #fff;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow-y: hidden;
+
+        font: normal 10pt Ubuntu;
+      }
+
+      input[type="text"] {
+        width: 100%;
+
+        border-radius: 0.25rem;
+        border: 2px solid rgba(91, 91, 226, 0.904);
+        padding: 1rem;
+
+        margin-bottom: 1rem;
+      }
+
+      input[type="button"] {
+        width: 20%;
+
+        background: transparent;
+        border-radius: 0.25rem;
+        border: 1px solid #fff;
+        padding: 1rem;
+
+        cursor: pointer;
+        color: #fff;
+      }
+      input[type="button"]:hover {
+        filter: brightness(0.9);
+      }
+
+      div {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="res">Hello, Diz-nos qual é o teu país</h1>
+      <input
+        type="text"
+        name="pais"
+        id="pais"
+        placeholder="Digite qual é o seu país"
+      />
+      <input type="button" value="Verificar" id="btn" />
+    </div>
+
+    <script>
+      var btn = document.querySelector("#btn");
+
+      btn.addEventListener("click", verificar);
+
+      function verificar() {
+        const pais = String(document.querySelector("#pais").value);
+        console.log(typeof pais);
+        const res = document.querySelector("#res");
+
+        if (pais != "Angola") {
+          res.innerHTML = `Hello, os seu país é <strong>${pais}</strong> e és estrangeiro`;
+        } else {
+          res.innerHTML = `Hello, o seu país é <strong>${pais}</strong> e és angolano`;
+        }
+      }
+    </script>
+  </body>
+</html>
