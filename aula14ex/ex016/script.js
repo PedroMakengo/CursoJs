@@ -6,16 +6,16 @@ btn.addEventListener("click", function () {
   let passo = Number(document.querySelector("#value3").value);
   const res = document.querySelector("#res");
 
-  if (!valInicial || !valFInal || !passo) {
-    res.innerText = "Impossível contar";
-  } else if (passo <= 0) {
-    alert("Passo invalido! Considerando o passo 1");
-  } else if (valInicial < valFInal) {
-    for (valInicial; valInicial <= valFInal; valInicial += passo) {
-      console.log(valInicial);
-      res.innerHTML = "<p>Contando:</p>";
-      // Verificar está parte para melhorar
-      res.innerText = `${valInicial}`;
+  if (valInicial.length == 0 || valFInal.length == 0 || passo.length == 0) {
+    alert("[Erro] faltam dados");
+  } else {
+    res.innerHTML = "Contando:";
+    let i = valInicial;
+    let f = valFInal;
+    let p = passo;
+
+    for (let contador = i; contador <= f; contador += p) {
+      res.innerHTML += ` ${contador} 👉`;
     }
   }
 });
