@@ -11,7 +11,7 @@ btn.addEventListener("click", function () {
     res.innerHTML = "";
     for (let i = 1; i <= 12; i++) {
       result = Number(num) * i;
-      res.innerHTML += `<option>${num} x ${i} = ${result}</option>`;
+      res.innerHTML += `<option value=${i}>${num} x ${i} = ${result}</option>`;
     }
   }
 });
